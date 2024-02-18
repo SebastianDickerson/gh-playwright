@@ -22,5 +22,6 @@ test('get search modal', async ({ page }) => {
 
   // Click search input
   await page.getByLabel('Search').click();
-  await page.getByPlaceholder('Search docs').click();
+
+  await expect(page.getByPlaceholder('Search docs')).toBeVisible();
 });
